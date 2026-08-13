@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elif için 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,900;1,600&family=Caveat:wght@500;700&family=Karla:wght@400;500;700&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3e8d3;
+    --paper-dark:#e9dabf;
+    --ink:#3b2a20;
+    --rose:#c97b89;
+    --burgundy:#7a2739;
+    --marigold:#e4a33e;
+    --sage:#7c8a6e;
+    --card:#fbf4e4;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(0,0,0,0.03), transparent 45%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    overflow-x:hidden;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:6vh 6vw;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'Caveat', cursive;
+    font-size:1.6rem;
+    color:var(--rose);
+    transform:rotate(-3deg);
+    margin-bottom:-0.5rem;
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(3.5rem, 12vw, 8rem);
+    color:var(--burgundy);
+    margin:0;
+    line-height:0.95;
+    letter-spacing:-0.02em;
+  }
+  .hero p.sub{
+    font-size:1.1rem;
+    max-width:34ch;
+    margin-top:1.2rem;
+    color:#5a4636;
+  }
+
+  /* together counter - ticket stub */
+  .ticket{
+    margin-top:2.8rem;
+    display:inline-flex;
+    align-items:stretch;
+    background:var(--card);
+    border:1px dashed var(--ink);
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(58,40,32,0.12);
+    overflow:hidden;
+  }
+  .ticket .num{
+    padding:1rem 1.6rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .ticket .num .value{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-size:2.6rem;
+    color:var(--burgundy);
+    line-height:1;
+  }
+  .ticket .num .label{
+    font-family:'Courier Prime', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-top:0.35rem;
+    color:#6b5644;
+  }
+  .ticket .divider{
+    width:0;
+    border-left:1.5px dashed var(--sage);
+    margin:0.6rem 0;
+  }
+  .ticket .since{
+    padding:1rem 1.4rem;
+    display:flex;
+    align-items:center;
+    font-family:'Courier Prime', monospace;
+    font-size:0.75rem;
+    color:#6b5644;
+    max-width:11ch;
+  }
+
+  .scroll-hint{
+    position:absolute;
+    bottom:2.2rem;
+    font-family:'Caveat', cursive;
+    font-size:1.3rem;
+    color:var(--sage);
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(6px);}
+  }
+
+  section{padding:6rem 6vw;}
+  .section-title{
+    font-family:'Caveat', cursive;
+    font-size:2.2rem;
+    color:var(--rose);
+    text-align:center;
+    transform:rotate(-1.5deg);
+    margin-bottom:0.2rem;
+  }
+  .section-heading{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(1.8rem,4vw,2.6rem);
+    text-align:center;
+    color:var(--ink);
+    margin-top:0;
+    margin-bottom:3rem;
+  }
+
+  /* ---------- LETTER ---------- */
+  .letter-wrap{
+    display:flex;
+    justify-content:center;
+  }
+  .letter{
+    background:var(--card);
+    max-width:640px;
+    width:100%;
+    padding:3rem 3rem 2.4rem;
+    border-radius:4px;
+    position:relative;
+    box-shadow:
+      0 1px 1px rgba(58,40,32,0.05),
+      0 10px 30px rgba(58,40,32,0.15);
+    transform:rotate(-0.6deg);
+  }
+  .letter::before{
+    content:'';
+    position:absolute;
+    top:-14px; left:50%;
+    transform:translateX(-50%) rotate(-4deg);
+    width:70px; height:26px;
+    background:rgba(228,163,62,0.55);
+    border:1px solid rgba(58,40,32,0.08);
+  }
+  .letter p{
+    font-size:1.08rem;
+    line-height:1.85;
+    margin:0 0 1.2rem;
+  }
+  .letter p:last-of-type{margin-bottom:0;}
+  .signoff{
+    font-family:'Caveat', cursive;
+    font-size:1.8rem;
+    color:var(--burgundy);
+    text-align:right;
+    margin-top:1.6rem;
+  }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{
+    max-width:720px;
+    margin:0 auto;
+    position:relative;
+    padding-left:2.4rem;
+  }
+  .timeline::before{
+    content:'';
+    position:absolute;
+    left:9px; top:6px; bottom:6px;
+    width:2px;
+    background:repeating-linear-gradient(to bottom, var(--sage) 0 6px, transparent 6px 12px);
+  }
+  .t-item{
+    position:relative;
+    margin-bottom:2.6rem;
+    padding:1.4rem 1.6rem;
+    background:var(--card);
+    border-radius:10px;
+    box-shadow:0 6px 16px rgba(58,40,32,0.1);
+  }
+  .t-item:last-child{margin-bottom:0;}
+  .t-item::before{
+    content:'';
+    position:absolute;
+    left:-2.05rem; top:1.6rem;
+    width:14px; height:14px;
+    border-radius:50%;
+    background:var(--rose);
+    border:3px solid var(--paper);
+    box-shadow:0 0 0 2px var(--sage);
+  }
+  .t-item.highlight::before{background:var(--marigold);}
+  .t-item.highlight{border:1.5px solid var(--marigold);}
+  .t-date{
+    font-family:'Courier Prime', monospace;
+    font-size:0.78rem;
+    color:var(--rose);
+    letter-spacing:0.04em;
+  }
+  .t-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.3rem;
+    margin:0.3rem 0 0;
+  }
+  .t-photos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:1.1rem;
+  }
+  .t-photos .polaroid{
+    width:240px;
+    max-width:70vw;
+    padding:0.9rem 0.9rem 2.1rem;
+  }
+  .t-photos .polaroid .tape{
+    width:54px; height:20px; top:-11px;
+  }
+  .t-photos .polaroid figcaption{
+    font-size:1.15rem;
+    margin-top:0.6rem;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .board{
+    background:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 6px),
+      var(--paper-dark);
+    border-radius:18px;
+    padding:4rem 5vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:2.4rem 2rem;
+    justify-content:center;
+  }
+  .polaroid{
+    background:#fff;
+    padding:0.8rem 0.8rem 2.2rem;
+    box-shadow:0 10px 22px rgba(0,0,0,0.18);
+    width:190px;
+    position:relative;
+    transition:transform 0.25s ease;
+  }
+  .polaroid:nth-child(1){transform:rotate(-6deg);}
+  .polaroid:nth-child(2){transform:rotate(4deg);}
+  .polaroid:nth-child(3){transform:rotate(-2deg);}
+  .polaroid:nth-child(4){transform:rotate(5deg);}
+  .polaroid:hover{transform:rotate(0deg) scale(1.05); z-index:2;}
+  .polaroid .tape{
+    position:absolute;
+    top:-12px; left:50%;
+    transform:translateX(-50%) rotate(-3deg);
+    width:56px; height:20px;
+    background:rgba(199,123,137,0.5);
+  }
+  .polaroid img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    display:block;
+    background:linear-gradient(135deg, #e9dabf, #c97b89 60%, #7a2739);
+  }
+  .polaroid figcaption{
+    font-family:'Caveat', cursive;
+    font-size:1.15rem;
+    text-align:center;
+    margin-top:0.6rem;
+    color:var(--ink);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    text-align:center;
+    padding:5rem 6vw 4rem;
+  }
+  .heart-btn{
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    background:var(--burgundy);
+    color:var(--card);
+    border:none;
+    padding:0.9rem 1.8rem;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(122,39,57,0.35);
+    transition:transform 0.15s ease;
+  }
+  .heart-btn:hover{transform:translateY(-2px);}
+  .heart-btn:focus-visible, a:focus-visible, .polaroid:focus-visible{
+    outline:3px solid var(--sage);
+    outline-offset:3px;
+  }
+  footer .doodle{
+    margin-top:1.4rem;
+    font-family:'Caveat', cursive;
+    color:var(--sage);
+    font-size:1.05rem;
+  }
+
+  #confetti-canvas{
+    position:fixed; inset:0;
+    pointer-events:none;
+    z-index:50;
+  }
+
+  /* ---------- FRIEND ENVELOPES ---------- */
+  .friends-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.8rem;
+    justify-content:center;
+  }
+  .env-card{
+    width:340px;
+    max-width:88vw;
+    background:var(--card);
+    border-radius:10px;
+    box-shadow:0 8px 18px rgba(58,40,32,0.14);
+    overflow:hidden;
+    transition:transform 0.2s ease;
+  }
+  .env-front{
+    padding:1.8rem 1rem 1.4rem;
+    text-align:center;
+    cursor:pointer;
+    background:linear-gradient(180deg, rgba(228,163,62,0.12), transparent);
+  }
+  .env-front:hover{background:linear-gradient(180deg, rgba(228,163,62,0.22), transparent);}
+  .env-seal{
+    width:38px; height:38px;
+    border-radius:50%;
+    background:var(--burgundy);
+    color:var(--card);
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 0.7rem;
+    font-size:1.05rem;
+  }
+  .env-icon{font-size:1.6rem; margin-bottom:0.3rem;}
+  .env-name{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--ink);
+  }
+  .env-hint{
+    font-family:'Courier Prime', monospace;
+    font-size:0.65rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:#8a7a67;
+    margin-top:0.4rem;
+  }
+  .env-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.45s ease, padding 0.3s ease;
+    padding:0 1.1rem;
+  }
+  .env-card.open .env-content{
+    max-height:600px;
+    padding:0 1.1rem 1.3rem;
+  }
+  .env-content img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:0.8rem;
+    background:linear-gradient(135deg, #e9dabf, #c97b89 60%, #7a2739);
+  }
+  .env-content p{
+    font-size:0.92rem;
+    line-height:1.6;
+    margin:0 0 0.6rem;
+  }
+  .env-content .env-sign{
+    font-family:'Caveat', cursive;
+    font-size:1.2rem;
+    color:var(--rose);
+    text-align:right;
+  }
+
+  /* ---------- QUOTES LIST ---------- */
+  .quotes-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.6rem;
+    justify-content:center;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .quote-card{
+    background:var(--card);
+    width:230px;
+    padding:1.8rem 1.3rem 1.3rem;
+    border-radius:6px;
+    box-shadow:0 6px 16px rgba(58,40,32,0.12);
+    position:relative;
+    transition:transform 0.2s ease;
+  }
+  .quote-card::before{
+    content:'“';
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-size:2.4rem;
+    color:var(--marigold);
+    position:absolute;
+    top:-4px; left:14px;
+    line-height:1;
+  }
+  .quote-card p{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:1.05rem;
+    line-height:1.55;
+    margin:0;
+    color:var(--ink);
+  }
+  .quote-card:nth-child(odd){transform:rotate(-2deg);}
+  .quote-card:nth-child(even){transform:rotate(2deg);}
+  .quote-card:hover{transform:rotate(0deg) scale(1.04);}
+
+  /* ---------- BUCKET LIST ---------- */
+  .bucket-list{
+    max-width:560px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+  .bucket-item{
+    display:flex;
+    align-items:center;
+    gap:1.1rem;
+    background:var(--card);
+    padding:1rem 1.3rem;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(58,40,32,0.08);
+    cursor:pointer;
+    transition:transform 0.15s ease;
+  }
+  .bucket-item:hover{transform:translateX(4px);}
+  .bucket-check{
+    width:26px; height:26px;
+    border-radius:50%;
+    border:2px solid var(--rose);
+    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.9rem;
+    color:var(--card);
+    transition:background 0.2s ease, border-color 0.2s ease;
+  }
+  .bucket-item.done .bucket-check{background:var(--rose); border-color:var(--rose);}
+  .bucket-item.done .bucket-check::after{content:'✓';}
+  .bucket-text{
+    font-family:'Karla', sans-serif;
+    font-size:1.05rem;
+    color:var(--ink);
+    transition:opacity 0.2s ease;
+  }
+  .bucket-item.done .bucket-text{opacity:0.55; text-decoration:line-through;}
+
+  /* ---------- DISTANCE ---------- */
+  .distance-wrap{display:flex; justify-content:center;}
+  .distance-card{
+    background:var(--card);
+    border:1px dashed var(--ink);
+    border-radius:14px;
+    max-width:420px;
+    width:100%;
+    padding:2.4rem 2rem;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(58,40,32,0.12);
+  }
+  .distance-icon{font-size:2rem; margin-bottom:0.6rem;}
+  .distance-btn{
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:0.95rem;
+    background:var(--burgundy);
+    color:var(--card);
+    border:none;
+    padding:0.85rem 1.9rem;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(122,39,57,0.3);
+    transition:transform 0.15s ease;
+  }
+  .distance-btn:hover{transform:translateY(-2px);}
+  .distance-result{
+    margin-top:1.4rem;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    line-height:1.6;
+    color:var(--ink);
+    display:none;
+  }
+  .distance-result.show{display:block;}
+  .distance-value{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:2.4rem;
+    color:var(--burgundy);
+    display:block;
+    margin-bottom:0.3rem;
+  }
+
+  /* ---------- OUTRO / TO BE CONTINUED ---------- */
+  #outro-overlay{
+    position:fixed; inset:0; z-index:300;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg, rgba(59,42,32,0.97), rgba(122,39,57,0.97));
+    opacity:0; visibility:hidden;
+    transition:opacity 0.9s ease, visibility 0.9s ease;
+    padding:6vh 8vw;
+    text-align:center;
+  }
+  #outro-overlay.open{opacity:1; visibility:visible;}
+  .outro-content{color:var(--card); max-width:520px;}
+  .outro-tag{
+    font-family:'Caveat', cursive;
+    font-size:1.5rem;
+    color:var(--marigold);
+    letter-spacing:0.03em;
+  }
+  .outro-title{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-style:italic;
+    font-size:clamp(2rem, 6vw, 3.4rem);
+    margin:0.5rem 0 1.6rem;
+    line-height:1.1;
+  }
+  .outro-text{
+    font-family:'Karla', sans-serif;
+    font-size:1.15rem;
+    line-height:1.75;
+    margin:0 auto 2.2rem;
+  }
+  .outro-close{
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:0.9rem;
+    background:transparent;
+    color:var(--card);
+    border:1.5px solid rgba(251,244,228,0.5);
+    padding:0.75rem 1.8rem;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+  }
+  .outro-close:hover{background:rgba(251,244,228,0.12);}
+
+  /* ---------- INTRO STORY OVERLAY ---------- */
+  #intro-overlay{
+    position:fixed; inset:0; z-index:200;
+    display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.4), transparent 45%),
+      var(--paper);
+    padding:6vh 8vw;
+    transition:opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #intro-overlay.closed{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  .intro-card{max-width:560px; width:100%; text-align:center;}
+  .intro-dots{display:flex; gap:0.5rem; justify-content:center; margin-bottom:2.6rem;}
+  .intro-dots span{
+    width:8px; height:8px; border-radius:50%;
+    background:rgba(59,42,32,0.2);
+    transition:background 0.3s ease, transform 0.3s ease;
+  }
+  .intro-dots span.active{background:var(--rose); transform:scale(1.3);}
+  .story-step{display:none;}
+  .story-step.active{display:block; animation:fadeUp 0.6s ease;}
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(14px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .story-mark{font-family:'Fraunces', serif; font-size:2.6rem; color:var(--marigold); line-height:1;}
+  .story-photo{
+    width:170px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:10px;
+    border:6px solid var(--card);
+    box-shadow:0 10px 24px rgba(58,40,32,0.22);
+    transform:rotate(-4deg);
+    margin-bottom:1.6rem;
+    background:linear-gradient(135deg, #e9dabf, #c97b89 60%, #7a2739);
+  }
+  .story-photo-caption{
+    font-family:'Caveat', cursive;
+    font-size:1.2rem;
+    color:var(--rose);
+    margin:-1.2rem 0 1.6rem;
+  }
+  .story-text{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(1.3rem, 3.2vw, 1.9rem);
+    line-height:1.55;
+    color:var(--ink);
+    margin:0.6rem 0 2.8rem;
+  }
+  .intro-nav{display:flex; gap:1.2rem; justify-content:center; align-items:center;}
+  .intro-btn{
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:0.95rem;
+    background:var(--burgundy);
+    color:var(--card);
+    border:none;
+    padding:0.85rem 2rem;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(122,39,57,0.3);
+    transition:transform 0.15s ease;
+  }
+  .intro-btn:hover{transform:translateY(-2px);}
+  .intro-back{
+    background:none; border:none;
+    color:var(--sage);
+    font-family:'Karla', sans-serif;
+    cursor:pointer;
+    font-size:0.9rem;
+    text-decoration:underline;
+  }
+  .intro-back:disabled{visibility:hidden;}
+
+  /* ---------- LOGIN GATE ---------- */
+  #login-gate{
+    position:fixed; inset:0; z-index:400;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--paper);
+    padding:6vh 8vw;
+    transition:opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #login-gate.closed{opacity:0; visibility:hidden; pointer-events:none;}
+  .login-card{
+    max-width:360px;
+    width:100%;
+    text-align:center;
+    background:var(--card);
+    border:1px dashed var(--ink);
+    border-radius:14px;
+    padding:2.6rem 2rem;
+    box-shadow:0 10px 24px rgba(58,40,32,0.15);
+  }
+  .login-icon{font-size:2rem; margin-bottom:0.4rem;}
+  .login-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:1.5rem;
+    color:var(--burgundy);
+    margin:0 0 1.6rem;
+  }
+  .login-field{
+    width:100%;
+    font-family:'Karla', sans-serif;
+    font-size:1rem;
+    padding:0.75rem 1rem;
+    border:1.5px solid rgba(58,40,32,0.25);
+    border-radius:8px;
+    margin-bottom:0.9rem;
+    background:var(--paper);
+    color:var(--ink);
+    box-sizing:border-box;
+  }
+  .login-field:focus{outline:2px solid var(--rose); border-color:var(--rose);}
+  .login-btn{
+    width:100%;
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:0.95rem;
+    background:var(--burgundy);
+    color:var(--card);
+    border:none;
+    padding:0.85rem;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(122,39,57,0.3);
+    transition:transform 0.15s ease;
+    margin-top:0.4rem;
+  }
+  .login-btn:hover{transform:translateY(-2px);}
+  .login-error{
+    color:var(--burgundy);
+    font-family:'Karla', sans-serif;
+    font-size:0.85rem;
+    margin-top:0.9rem;
+    min-height:1.2em;
+  }
+  .shake{animation:shake 0.4s ease;}
+  @keyframes shake{
+    0%,100%{transform:translateX(0);}
+    25%{transform:translateX(-8px);}
+    75%{transform:translateX(8px);}
+  }
+
+  @media (max-width:600px){
+    section{padding:4rem 6vw;}
+    .ticket{flex-direction:row;}
+    .polaroid{width:42vw;}
+  }
+</style>
+</head>
+<body>
+
+<div id="login-gate">
+  <div class="login-card">
+    <div class="login-icon">🔒</div>
+    <div class="login-title">Bu site sana özel</div>
+    <input type="text" id="loginUser" class="login-field" placeholder="Kullanıcı adı" autocomplete="off">
+    <input type="password" id="loginPass" class="login-field" placeholder="Şifre">
+    <button class="login-btn" id="loginBtn">Gir</button>
+    <div class="login-error" id="loginError"></div>
+  </div>
+</div>
+
+<div id="intro-overlay">
+  <div class="intro-card">
+    <div class="intro-dots" id="introDots"></div>
+
+    <div class="story-step active">
+      <img class="story-photo" src="foto-cocukluk.jpg" alt="Elif'in çocukluk fotoğrafı" loading="lazy">
+      <div class="story-photo-caption">küçük Elif</div>
+      <div class="story-mark">”</div>
+      <p class="story-text">Benim güzel minik sevgilim 23 yıl önce tam bugün doğmuş.</p>
+    </div>
+    <div class="story-step">
+      <div class="story-mark">”</div>
+      <p class="story-text">Doğum günün kutlu olsun, nniice mutlu senelere bitanem.</p>
+    </div>
+    <div class="story-step">
+      <div class="story-mark">”</div>
+      <p class="story-text">Aramızda dağlar, ovalar, göller olduğu için sana hediye olarak böyle bir site yapmak istedim.</p>
+    </div>
+    <div class="story-step">
+      <div class="story-mark">”</div>
+      <p class="story-text">İçerisinde bize ait parçaları bulacağın, seninle biriktirdiğimiz anılardan anlardan oluşan ve sana söylemek istediklerimi içeren bir site.</p>
+    </div>
+    <div class="story-step">
+      <div class="story-mark">”</div>
+      <p class="story-text">Umarım beğenirsin, o güzel gözlerinde birazcık bile bir gülümseme oluşturabilirsem ne mutlu bana...</p>
+    </div>
+
+    <div class="intro-nav">
+      <button class="intro-back" id="introBack" disabled>← geri</button>
+      <button class="intro-btn" id="introNext">İleri</button>
+    </div>
+  </div>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div id="outro-overlay">
+  <div class="outro-content">
+    <div class="outro-tag">bir sonraki sahne...</div>
+    <div class="outro-title">devam edecek</div>
+    <p class="outro-text">İkinci hediyen burada değil — Çok yakında.. yarın sakaryada (tam tamına 61 kilo)</p>
+    <button class="outro-close" id="outroClose">kapat</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="eyebrow">bugün çok özel bir gün</div>
+  <h1>Elif'im</h1>
+  <p class="sub">Bu küçük köşeyi, seninle geçen anları ve sana söylemek istediklerimi bir araya getirmek için hazırladım.</p>
+
+  <div class="ticket" aria-label="Birlikte geçirdiğimiz gün sayısı">
+    <div class="num">
+      <span class="value" id="dayCount">0</span>
+      <span class="label">gündür birlikteyiz</span>
+    </div>
+    <div class="divider"></div>
+    <div class="since">10 Haziran 2026'dan beri</div>
+  </div>
+
+  <div class="scroll-hint">↓ aşağı kaydır</div>
+</section>
+
+<section id="letter">
+  <div class="section-title">bir mektup</div>
+  <h2 class="section-heading">Sana yazdıklarım</h2>
+  <div class="letter-wrap">
+    <div class="letter">
+      <p>Elif'im,</p>
+      <p> Bu senenin, taekwondonun hatta Odtünün bana kattığı en güzel şeysin, yüzümü güldüren gülümsemen, içime sinmiş kokun, beni sabah namazlarına kaldırman, namaza başlamama vesile olman ve daha sayamayacağım birçok sana dair şeyi çok seviyorum.</p>
+      <p>Bugün senin doğum günün. Yeni yaşının, sana her zaman yakışan o gülümsemeyi daha da sık görmemize vesile olmasını, hayalindeki şeylerin bir bir gerçek olmasını ve birlikte olduğumuz her anı güzel bir şekilde geçirmemizi diliyorum</p>
+      <p>İyi ki doğdun. İyi ki varsın. İyi ki hayatımdasın bitanem.</p>
+      <p class="signoff">seni seven lavuk</p>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="section-title">hikayemiz</div>
+  <h2 class="section-heading">Küçük ama önemli anlar</h2>
+  <div class="timeline">
+
+    <div class="t-item">
+      <div class="t-date">31 MAYIS 2026</div>
+      <div class="t-title">Birlikte ilk namazımız</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-31mayis.jpg" alt="31 Mayıs anısı" loading="lazy">
+          <figcaption>ilk namaz</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">9 HAZİRAN 2026</div>
+      <div class="t-title">Camide pide</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-9haziran.jpg" alt="9 Haziran anısı" loading="lazy">
+          <figcaption>pide keyfi</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item highlight">
+      <div class="t-date">10 HAZİRAN 2026</div>
+      <div class="t-title">Sevgili olduğumuz gün (O güne ait bir fotoğraf yoktu ben de bunu koydum :) ) </div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-10haziran.jpg" alt="10 Haziran anısı" loading="lazy">
+          <figcaption>o gün</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">14 HAZİRAN 2026</div>
+      <div class="t-title">İlk hediye</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-14haziran-a.jpg" alt="14 Haziran anısı 1" loading="lazy">
+          <figcaption>hediye</figcaption>
+        </figure>
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-14haziran-b.jpg" alt="14 Haziran anısı 2" loading="lazy">
+          <figcaption>o an</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">29 HAZİRAN 2026</div>
+      <div class="t-title">Volkan Demirel</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-29haziran.jpg" alt="29 Haziran anısı" loading="lazy">
+          <figcaption>klasik</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">1 TEMMUZ 2026</div>
+      <div class="t-title">Sakarya'nın Fethi</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-1temmuz.jpg" alt="1 Temmuz anısı" loading="lazy">
+          <figcaption>fetih günü</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">15 TEMMUZ 2026</div>
+      <div class="t-title">Fizik çimleri</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-15temmuz.jpg" alt="15 Temmuz anısı" loading="lazy">
+          <figcaption>çimlerde</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-date">19 TEMMUZ 2026</div>
+      <div class="t-title">Mezuniyet</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-19temmuz-a.jpg" alt="19 Temmuz anısı 1" loading="lazy">
+          <figcaption>mezuniyet</figcaption>
+        </figure>
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-19temmuz-b.jpg" alt="19 Temmuz anısı 2" loading="lazy">
+          <figcaption>gurur</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="t-item highlight">
+      <div class="t-date">14 AĞUSTOS</div>
+      <div class="t-title">Elif'in doğum günü 🎂</div>
+      <div class="t-photos">
+        <figure class="polaroid" tabindex="0">
+          <span class="tape"></span>
+          <img src="foto-14agustos.jpg" alt="Doğum günü anısı" loading="lazy">
+          <figcaption>doğum günü</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="distance">
+  <div class="section-title">mesafe</div>
+  <h2 class="section-heading">Şu An Aramızdaki Uzaklık</h2>
+  <div class="distance-wrap">
+    <div class="distance-card">
+      <div class="distance-icon">📍</div>
+      <p>Konumunu paylaşırsan, şu an aramızda kaç km olduğunu hesaplayalım.</p>
+      <button class="distance-btn" id="distanceBtn">Mesafeyi Hesapla</button>
+      <div class="distance-result" id="distanceResult"></div>
+    </div>
+  </div>
+</section>
+
+<section id="bucketlist">
+  <div class="section-title">Gidelim</div>
+  <h2 class="section-heading">Bizim Listemiz</h2>
+  <div class="bucket-list">
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Valide-i Atik Külliyesi</span>
+    </div>
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Bosna Yürüyüşü</span>
+    </div>
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Yıldız Hamidiye Cami</span>
+    </div>
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Bursa Ulu Cami</span>
+    </div>
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Trabzon Yayla</span>
+    </div>
+    <div class="bucket-item" role="checkbox" aria-checked="false" tabindex="0">
+      <span class="bucket-check"></span>
+      <span class="bucket-text">Doğu Ekspresi</span>
+    </div>
+  </div>
+</section>
+
+<section id="quotes">
+  <div class="section-title">sözlerim</div>
+  <h2 class="section-heading">Sana söylediğim güzel sözler</h2>
+  <div class="quotes-grid">
+    <div class="quote-card"><p>Aşkım</p></div>
+    <div class="quote-card"><p>Balım</p></div>
+    <div class="quote-card"><p>Sevgilim</p></div>
+    <div class="quote-card"><p>Avradım</p></div>
+    <div class="quote-card"><p>Hayatım</p></div>
+    <div class="quote-card"><p>Güzelim</p></div>
+    <div class="quote-card"><p>Güzel Gözlüm</p></div>
+    <div class="quote-card"><p>Güzeller Güzelim</p></div>
+    <div class="quote-card"><p>Trabzonlum💙❤️</p></div>
+    <div class="quote-card"><p>Canım</p></div>
+    <div class="quote-card"><p>Elifim</p></div>
+  </div>
+</section>
+
+<footer>
+  <button class="heart-btn" id="celebrateBtn">Kutla 🎉</button>
+  <div class="doodle">iyi ki doğdun, Elif'im ♡</div>
+</footer>
+
+<script>
+  // Birlikte geçirilen gün sayısı
+  const startDate = new Date('2026-06-10T00:00:00');
+  function updateCounter(){
+    const now = new Date();
+    const diff = Math.floor((now - startDate) / (1000*60*60*24));
+    document.getElementById('dayCount').textContent = Math.max(diff, 0);
+  }
+  updateCounter();
+
+  // Konfeti
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  function resize(){ canvas.width = innerWidth; canvas.height = innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const colors = ['#c97b89','#e4a33e','#7a2739','#7c8a6e','#fbf4e4'];
+  let particles = [];
+
+  function burst(){
+    particles = particles.concat(Array.from({length:80}, () => ({
+      x: canvas.width/2 + (Math.random()-0.5)*120,
+      y: canvas.height*0.3,
+      vx: (Math.random()-0.5)*8,
+      vy: Math.random()*-6 - 2,
+      size: Math.random()*6+4,
+      color: colors[Math.floor(Math.random()*colors.length)],
+      rotation: Math.random()*360,
+      spin: (Math.random()-0.5)*10,
+      life: 0
+    })));
+  }
+
+  function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+      p.vy += 0.15;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rotation += p.spin;
+      p.life++;
+      ctx.save();
+      ctx.translate(p.x,p.y);
+      ctx.rotate(p.rotation*Math.PI/180);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+      ctx.restore();
+    });
+    particles = particles.filter(p => p.y < canvas.height + 20 && p.life < 400);
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  const outroOverlay = document.getElementById('outro-overlay');
+  const outroClose = document.getElementById('outroClose');
+
+  document.getElementById('celebrateBtn').addEventListener('click', () => {
+    burst();
+    setTimeout(() => outroOverlay.classList.add('open'), 1300);
+  });
+  outroClose.addEventListener('click', () => outroOverlay.classList.remove('open'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Aramızdaki mesafe
+  // Buradaki koordinatları kendi (sabit) konumunla değiştirebilirsin. Şu an Ankara/ODTÜ merkezli.
+  const MY_LOCATION = { lat: 39.8930, lon: 32.7809 };
+
+  function distanceKm(lat1, lon1, lat2, lon2){
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI/180;
+    const dLon = (lon2 - lon1) * Math.PI/180;
+    const a = Math.sin(dLat/2)**2 +
+      Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) *
+      Math.sin(dLon/2)**2;
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
+
+  const distanceBtn = document.getElementById('distanceBtn');
+  const distanceResult = document.getElementById('distanceResult');
+
+  distanceBtn.addEventListener('click', () => {
+    if(!navigator.geolocation){
+      distanceResult.textContent = 'Tarayıcın konum paylaşımını desteklemiyor, ama nerede olursan ol kalbim hep yanında. ❤️';
+      distanceResult.classList.add('show');
+      return;
+    }
+    distanceBtn.textContent = 'Hesaplanıyor...';
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const km = distanceKm(MY_LOCATION.lat, MY_LOCATION.lon, pos.coords.latitude, pos.coords.longitude);
+        const rounded = km < 1 ? Math.round(km * 1000) : Math.round(km);
+        const unit = km < 1 ? 'metre' : 'km';
+        distanceResult.innerHTML = `<span class="distance-value">${rounded} ${unit}</span>şu an aramızdaki mesafe. Ama fark etmez, kalpten kalbe uzaklık hep sıfır. ❤️`;
+        distanceResult.classList.add('show');
+        distanceBtn.textContent = 'Tekrar Hesapla';
+      },
+      () => {
+        distanceResult.textContent = 'Konumunu paylaşmadın, sorun değil — nerede olursan ol hep yanındayım. ❤️';
+        distanceResult.classList.add('show');
+        distanceBtn.textContent = 'Tekrar Dene';
+      }
+    );
+  });
+
+  // Bizim Listemiz - tıklanınca işaretle
+  document.querySelectorAll('.bucket-item').forEach(item => {
+    function toggleDone(){
+      const isDone = item.classList.toggle('done');
+      item.setAttribute('aria-checked', isDone);
+    }
+    item.addEventListener('click', toggleDone);
+    item.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        toggleDone();
+      }
+    });
+  });
+
+  // Açılış hikayesi
+  const introOverlay = document.getElementById('intro-overlay');
+  const storySteps = Array.from(document.querySelectorAll('.story-step'));
+  const introDotsWrap = document.getElementById('introDots');
+  const introNext = document.getElementById('introNext');
+  const introBack = document.getElementById('introBack');
+  let storyIndex = 0;
+
+  storySteps.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if(i === 0) dot.classList.add('active');
+    introDotsWrap.appendChild(dot);
+  });
+  const introDots = introDotsWrap.querySelectorAll('span');
+
+  function renderStory(){
+    storySteps.forEach((s, i) => s.classList.toggle('active', i === storyIndex));
+    introDots.forEach((d, i) => d.classList.toggle('active', i === storyIndex));
+    introBack.disabled = storyIndex === 0;
+    introNext.textContent = storyIndex === storySteps.length - 1 ? 'Siteye Gir ❤️' : 'İleri';
+  }
+  renderStory();
+
+  function closeIntro(){
+    introOverlay.classList.add('closed');
+    document.body.style.overflow = '';
+    if(!reduceMotion){ setTimeout(burst, 300); }
+  }
+
+  introNext.addEventListener('click', () => {
+    if(storyIndex < storySteps.length - 1){
+      storyIndex++;
+      renderStory();
+    } else {
+      closeIntro();
+    }
+  });
+  introBack.addEventListener('click', () => {
+    if(storyIndex > 0){
+      storyIndex--;
+      renderStory();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if(introOverlay.classList.contains('closed')) return;
+    if(e.key === 'Enter'){ introNext.click(); }
+    if(e.key === 'ArrowLeft'){ introBack.click(); }
+  });
+  document.body.style.overflow = 'hidden';
+
+  // Giriş ekranı (kullanıcı adı / şifre)
+  const LOGIN_USER = 'esy';
+  const LOGIN_PASS = '1861';
+  const loginGate = document.getElementById('login-gate');
+  const loginUser = document.getElementById('loginUser');
+  const loginPass = document.getElementById('loginPass');
+  const loginBtn = document.getElementById('loginBtn');
+  const loginError = document.getElementById('loginError');
+
+  function tryLogin(){
+    const u = loginUser.value.trim().toLowerCase();
+    const p = loginPass.value.trim();
+    if(u === LOGIN_USER && p === LOGIN_PASS){
+      loginGate.classList.add('closed');
+    } else {
+      loginError.textContent = 'Kullanıcı adı ya da şifre yanlış, tekrar dene.';
+      loginGate.querySelector('.login-card').classList.remove('shake');
+      void loginGate.offsetWidth;
+      loginGate.querySelector('.login-card').classList.add('shake');
+    }
+  }
+  loginBtn.addEventListener('click', tryLogin);
+  [loginUser, loginPass].forEach(field => {
+    field.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter') tryLogin();
+    });
+  });
+</script>
+
+</body>
+</html>
